@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// A model representing a football club
+///
 /// FootballClubs compete against other clubs in football competitions.
 struct FootballClub {
 
@@ -19,10 +21,10 @@ struct FootballClub {
     /// Every fan's favourite place to be on a Saturday afternoon
     var homeGround: String
     
-    /// All the people who work at the club
+    /// Returns all the people who work at the club
     var staff = Set<StaffMember>()
     
-    /// The subset of staff who play for the club
+    /// Returns the subset of staff who are ``Player``s
     var players: Set<Player> {
         Set<Player>(
             staff.compactMap { staff in
@@ -36,22 +38,22 @@ struct FootballClub {
         )
     }
 
-    /// The club's manager, if the role is filled, otherwise nil
+    /// Returns the club's manager, if the role is filled, otherwise nil
     var manager: StaffMember? {
         staff.first { staff in staff.role == .manager }
     }
     
-    /// The club's trainer, if the role is filled, otherwise nil
+    /// Returns the club's trainer, if the role is filled, is the ``Staff`` member who trains the players, otherwise nil
     var trainer: StaffMember? {
         staff.first { staff in staff.role == .trainer }
     }
     
-    /// The club's physio, if the role is filled, otherwise nil
+    /// Returns the club's physio, if the role is filled, is the ``Staff``member who helps players recover from injuries, otherwise nil
     var physio: StaffMember? {
         staff.first { staff in staff.role == .physio }
     }
     
-    /// The club's captain, if the role is filled, otherwise nil
+    /// Returns the club's captain, if the role is filled, is the ``Staff`` member and ``Player`` who shouts at other players on the field in an aggressive as possible manner,, otherwise nil
     var captain: Player? {
         players.first { player in player.isCaptain }
     }

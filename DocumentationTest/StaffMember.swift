@@ -27,7 +27,7 @@ struct StaffMember: Identifiable {
     /// Date the person joined the club
     var joiningDate: Date
     
-    /// The role of the person in the club
+    /// The ``Role`` of the person in the club
     var role: Role
     
     /// Describes the role a member of team can have
