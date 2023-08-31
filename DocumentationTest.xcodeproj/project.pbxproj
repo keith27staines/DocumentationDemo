@@ -13,6 +13,7 @@
 		53884FB02AA066C900EF9816 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53884FA82AA05A5500EF9816 /* Player.swift */; };
 		53884FB12AA066CB00EF9816 /* StaffMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53884FAA2AA05A7200EF9816 /* StaffMember.swift */; };
 		53884FB22AA0671800EF9816 /* DocumentationTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53884F9B2AA059D000EF9816 /* DocumentationTestTests.swift */; };
+		53D20F062AA147FD0081F3CE /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 53D20F052AA147FD0081F3CE /* Documentation.docc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		53884FA62AA05A3800EF9816 /* FootballClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballClub.swift; sourceTree = "<group>"; };
 		53884FA82AA05A5500EF9816 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		53884FAA2AA05A7200EF9816 /* StaffMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffMember.swift; sourceTree = "<group>"; };
+		53D20F052AA147FD0081F3CE /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				53884FA82AA05A5500EF9816 /* Player.swift */,
 				53884FAA2AA05A7200EF9816 /* StaffMember.swift */,
 				53884F912AA059D000EF9816 /* DocumentationTest.h */,
+				53D20F052AA147FD0081F3CE /* Documentation.docc */,
 			);
 			path = DocumentationTest;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				53884FB12AA066CB00EF9816 /* StaffMember.swift in Sources */,
 				53884FB02AA066C900EF9816 /* Player.swift in Sources */,
 				53884FAE2AA066C500EF9816 /* FootballClub.swift in Sources */,
+				53D20F062AA147FD0081F3CE /* Documentation.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,24 +6,24 @@
 //
 
 /// Players are the staff members of the club who actually take to the field
-struct Player {
-    var staffId: UUID
+public struct Player {
+    public var staffId: UUID
     
-    /// The player responsible for shouting at other players when they make a mistake
-    var isCaptain: Bool
+    /// Returns `true` if this player is officially responsible for shouting at other players when they make  mistakes, otherwise false
+    public var isCaptain: Bool
     
     /// The name of the player as displayed on their shirt
-    var shirtName: String
+    public var shirtName: String
     
     /// The number of the player as displayed on their shirt
-    var shirtNumber: Int
+    public var shirtNumber: Int
     
     /// The player's usual starting position on the field
-    var position: PlayerPosition
+    public var position: PlayerPosition
     
     /// Describes the position a player normally assumes on the field
-    enum PlayerPosition: Equatable {
-        enum Lane {
+    public enum PlayerPosition: Equatable {
+        public enum Lane {
             case centre
             case left
             case right
@@ -50,7 +50,7 @@ struct Player {
 
 /// Add hashable confirmance to Player to allow them to be contained in a Set
 extension Player: Hashable {
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(staffId)
     }
 }

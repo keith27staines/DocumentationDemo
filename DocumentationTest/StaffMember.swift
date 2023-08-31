@@ -7,31 +7,28 @@
 
 import Foundation
 
-/// A paid member of the club (as opposed to a fan who is a paying member of the club)
-struct StaffMember: Identifiable {
-    
-    /// tests for equality of two staff members by checking the staff uuid
-    static func == (lhs: StaffMember, rhs: StaffMember) -> Bool {
-        lhs.id == rhs.id
-    }
+/// A model representing salaried members of the club (as opposed to fans who pay to be a member of the club)
+///
+///  Players, trainers, physios  and all club officials, including the manager, are members of staff, but fans are not.
+public struct StaffMember: Identifiable {
     
     /// The unique identifier of the staff member
-    let id: UUID
+    public let id: UUID
     
     /// The registered full name of person
-    var name: String
+    public var name: String
     
     /// The person's nickname as used by fans
-    var nickname: String
+    public var nickname: String
     
     /// Date the person joined the club
-    var joiningDate: Date
+    public var joiningDate: Date
     
     /// The ``Role`` of the person in the club
-    var role: Role
+    public var role: Role
     
     /// Describes the role a member of team can have
-    enum Role: Equatable {
+    public enum Role: Equatable {
         /// "Da boss",  thinks he runs the show
         case manager
         
@@ -48,7 +45,7 @@ struct StaffMember: Identifiable {
 
 ///  Add hashable conformance to StaffMember so they can be contained in a set
 extension StaffMember: Hashable {
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
 }
