@@ -4,7 +4,7 @@
 
 ## Overview
 
-<!--@START_MENU_TOKEN@-->Text<!--@END_MENU_TOKEN@-->
+This is some text
 
 ## Topics
 
